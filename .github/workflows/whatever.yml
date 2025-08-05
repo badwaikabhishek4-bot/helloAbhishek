@@ -1,0 +1,16 @@
+name: Log Computer Name
+
+on:
+  workflow_dispatch:  # Allows manual triggering of the workflow
+
+jobs:
+  log-computer-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Get Computer Name
+        run: |
+          echo "Computer Name: $(hostname)"

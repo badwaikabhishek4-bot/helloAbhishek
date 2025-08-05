@@ -1,9 +1,7 @@
 name: Log Computer Name
 
 on:
-  push:
-    branches:
-      - main  # or any branch you want to trigger this workflow
+  workflow_dispatch:  # Allows manual triggering of the workflow
 
 jobs:
   log-computer-name:
